@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@layer base{
+    body{
+        font-family: nari;
+        direction: rtl;
+        
+
+
+    }
+    @font-face {
+        font-family: nari;
+        src: url(../font/Sahel-Black-FD.ttf);
+    }
+}
+@layer utilities {
+    .row {
+        @apply flex flex-wrap w-full
+    }
+    @layer utilities {
+  .rrow {
+    @apply flex flex-wrap  gap-5 justify-center items-center;
+  }
+  .rounded{
+   @apply border-radius: 25% 75% 70% 30% / 39% 51% 49% 61% ;
+  }
+}
+
+
+
+}
+@layer components {
+    .btnred {
+        @apply w-fit h-[50px] rounded-[50px] px-[15px] flex  items-center bg-amber-700 text-amber-50 gap-2.5 uppercase hover:bg-amber-200 hover:border hover:border-amber-50 hover:text-black hover:-translate-y-2 duration-700 
+    }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+
+
+
+
